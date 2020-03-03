@@ -1,6 +1,6 @@
 from django.conf.urls import url
-from .viewsf.register.register import register_view
-from .viewsf.login.login import login_view,logout_view
+from .views.register.register import register_view
+from .views.login.login import login_view,logout_view
 # from .viewsf.register import (
 #     login_view,
 #     register_view,
