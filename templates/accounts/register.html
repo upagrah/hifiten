@@ -1,0 +1,45 @@
+ {% extends "base.html" %} {% load static %}{% block content %}
+
+<title> Register </title>
+<link href="{% static 'css/register/main.css' %}" rel="stylesheet" media="all">
+<link href="{% static 'css/register/materialfont.css' %}" rel="stylesheet" media="all">
+<link href="{% static 'css/register/fontawesome.css' %}" rel="stylesheet" media="all">
+<div id="registration-app">
+    <div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w780">
+            <div class="card card-3">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h2 class="title" style="text-align: center;">Registration Info</h2>
+                    {%csrf_token%}
+                    <div class="input-group">
+                        <input class="input--style-3" type="text" placeholder="username" name="username" v-model="username">
+                    </div>
+                    <div class="input-group">
+                        <input class="input--style-3" type="password" placeholder="password" name="password" v-model="password">
+                    </div>
+                    <div class="input-group">
+                        <input class="input--style-3" type="password" placeholder="retype password" name="confirm-password" v-model="confirm_password">
+                    </div>
+                    <div class="input-group">
+                        <input class="input--style-3" type="email" placeholder="Email" name="email" v-model="email">
+                    </div>
+                    <div class="input-group">
+                        <input class="input--style-3" type="text" placeholder="Name" name="name" v-model="name">
+                    </div>
+                    <div class="p-t-10" align="center" id="register-error">
+                        <button class="btn btn--pill btn--green" v-on:click="submitRegister()">Submit</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var token = '{{csrf_token}}';
+</script>
+<script src="{% static 'javascript/register/register.js' %}"></script>
+{% endblock %}

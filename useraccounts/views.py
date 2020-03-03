@@ -25,7 +25,7 @@ def register_view(request):
 		new_user = authenticate(username = user.username, password = password)
 		login(request, new_user)
 		return redirect("/accounts/login")
-	return render(request, "accounts/form.html", {
+	return render(request, "accounts/register.html", {
 		"title" : "Register",
 		"form" : form,
 	})
