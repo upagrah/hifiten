@@ -3,7 +3,7 @@
 <title> Login </title>
 <link href="{% static 'css/register/main.css' %}" rel="stylesheet" media="all">
 <link href="{% static 'css/register/materialfont.css' %}" rel="stylesheet" media="all">
-<link href="{% static 'css/register/fontawesome.css' %}" rel="stylesheet" media="all">
+<link href="{% static 'css/fontawesome.css' %}" rel="stylesheet" media="all">
 <style>
 
 .card-3 .card-heading {
@@ -34,6 +34,12 @@
 
                     <div class="p-t-10" align="center" id="register-error">
                         <button class="btn btn--pill btn--green" v-on:click="submitLogin()">Login</button>
+                    </div>
+
+                    <div class="p-t-10"  id="register-error">
+                        <br/><br/>
+                        <a href="/accounts/register"> New user? Register here!</a>
+
                     </div>
 
                 </div>

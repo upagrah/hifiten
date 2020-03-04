@@ -1,0 +1,204 @@
+/*
+ * Sidebar
+ */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100; /* Behind the navbar */
+  padding: 48px 0 0; /* Height of navbar */
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+  background-color: #34495e;
+}
+
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: .5rem;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  background-color:#2c3e50;
+}
+
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+  .sidebar-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+}
+
+.sidebar .nav-link {
+  font-weight: 500;
+  color: white;
+}
+
+.sidebar .nav-link .feather {
+  margin-right: 4px;
+  color: white;
+}
+
+.sidebar .nav-link.active {
+  color: white;
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+  color: inherit;
+}
+
+.sidebar-heading {
+  font-size: .75rem;
+  text-transform: uppercase;
+}
+
+
+/*
+* FROM WHISPHERLY-----------------
+*/
+
+.app-area {
+  height: 100%; }
+
+.color-message-test {
+  background-color: white; }
+
+.color-channel-test {
+  background-color: #171C2F; }
+
+.comment-media:hover {
+  background-color: #F9F9F9; }
+
+#channel-title {
+  margin-left: 30px;
+  font-family: "Josefin Sans", sans-serif; }
+
+#message-view {
+  margin-top: 10px; }
+
+.col-channel-width {
+  width: 300px;
+  padding-left: 30px; }
+
+.channel-input {
+  width: 90%; }
+  .channel-input .add-button {
+    color: #8C93B3;
+    background-color: #171C2F; }
+
+.message-input {
+  width: 95%;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px; }
+  .message-input .add-button {
+    color: #8C93B3;
+    background-color: #171C2F; }
+
+.btn:disabled {
+  color: #8C93B3;
+  background-color: #171C2F;
+  opacity: 1.0; }
+
+html, body {
+  height: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden; }
+
+#user {
+  color: #8C93B3;
+  margin-top: 20px;
+  margin-left: 3px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 250%; }
+
+#channel-heading {
+  color: #8C93B3;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 200%; }
+
+#channel-option {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 150%; }
+
+.add-button:hover {
+  color: #171C2F;
+  background-color: #8C93B3; }
+
+ul {
+  list-style-type: none;
+  text-align: left;
+  margin-left: 0;
+  padding-left: 0; }
+  ul li {
+    color: #8C93B3;
+    font-size: 120%; }
+
+#plus {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 150%; }
+
+#send {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 100%; }
+
+#switch-channel-form:hover {
+  background-color: #8C93B3 !important; }
+  #switch-channel-form:hover #channel-option {
+    color: #171C2F !important; }
+
+#submit-switch-channel {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer; }
+
+h5, #time {
+  display: inline; }
+
+#submit-switch-channel:active, #submit-switch-channel:focus {
+  outline: none; }
+
+.comment-container {
+  margin-top: 15px;
+  overflow-y: scroll;
+  margin-left: 0px;
+  margin-right: auto;
+  background-color: white;
+  width: 150%;
+  height: 80%;
+  padding: 10px 10px 10px 33px; }
+  .comment-container .comment-item {
+    margin-right: 25px;
+    text-align: left;
+    word-wrap: break-word; }
+    .comment-container .comment-item .comment-user {
+      font-size: 131%;
+      color: black;
+      font-family: "Josefin Sans", sans-serif; }
+    .comment-container .comment-item .comment-comment {
+      font-size: 79%;
+      color: black;
+      font-family: "Josefin Sans", sans-serif; }
+    .comment-container .comment-item .comment-time {
+      font-size: 79%;
+      color: black;
+      font-family: "Josefin Sans", sans-serif; }
+.author-message {
+  font-size:15;
+  color:#3498db;
+
+}
+.author-message .date{
+  font-size:12;
+  color:#bdc3c7;
+}
+.body-message{
+  font-size:16;
+}
+/*# sourceMappingURL=styles.css.map */

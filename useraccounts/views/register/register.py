@@ -7,7 +7,7 @@ from django.conf import settings
 import sys
 sys.path.insert(0,settings.BASE_DIR)
 from utilities.validator import SpecialChars
-from utilities.responses import SuccessRes,ErrorRes 
+from utilities.responses import SuccessRes,ErrorRes
 from django.contrib.auth import authenticate, get_user_model
 import traceback
 import json
@@ -37,6 +37,8 @@ def register_post_validate(data):
 
 
 	if(username and password and name and confirmPassword and email):
+		if SpecialChars(username):
+			raise forms.ValidationError('Only alphabets and numbers are allowed in username')
 		if password != confirmPassword:
 			error={
 				'error_code':400,
@@ -82,7 +84,7 @@ def register_post_validate(data):
 		print(error)
 		raise forms.ValidationError(error['error_message'])
 def register_view(request):
-	
+
 	if(request.method=='GET'):
 		return render(request, "accounts/register.html", {
 			"title" : "Register",
@@ -91,7 +93,7 @@ def register_view(request):
 		try:
 			print(request.body)
 			data=json.loads(request.body)
-			
+
 			register_post_validate(data)
 		except forms.ValidationError as e:
 			error={
@@ -110,7 +112,7 @@ def register_view(request):
 			return ErrorRes(error)
 
 		try:
-			user=User.objects.create_user(username=data['username'], password=data['password'],email=data['email'],first_name=data['name'])
+			user=User.objects.create_user(username=data['username'], password=data['password'],email=data['email'],first_name=data['name'],is_active=False)
 			password = data['password']
 			user.set_password(password)
 			user.save()
@@ -121,7 +123,7 @@ def register_view(request):
 			#login(request, new_user)
 			#return redirect("/accounts/login")
 			return SuccessRes(data)
-			
+
 		except Exception as e:
 			#print(traceback.format_exc())
 			error={
@@ -130,9 +132,9 @@ def register_view(request):
 				'error_data':''
 			}
 			return ErrorRes(error)
-			
-		
-		
+
+
+
 	else:
 		error={
 				'error_code':400,
@@ -140,4 +142,3 @@ def register_view(request):
 				'error_data':''
 			}
 		return ErrorRes(error)
-

@@ -5,7 +5,7 @@ from django import forms
 from django.conf import settings
 import sys
 sys.path.insert(0,settings.BASE_DIR)
-from utilities.responses import SuccessRes,ErrorRes 
+from utilities.responses import SuccessRes,ErrorRes
 import json
 
 
@@ -23,12 +23,13 @@ def login_post_validate(data):
 
     if username and password:
         user = authenticate(username = username, password = password)
+        #print(user)
         if not user:
             raise forms.ValidationError('Username & Password combination incorrect, please check again')
         if not user.check_password(password):
             raise forms.ValidationError("Incorrect Password")
         if not user.is_active:
-            raise forms.ValidationError("User is no longer active")
+            raise forms.ValidationError(f"{username} account is not activated")
     else:
         raise forms.ValidationError("please send all the required parameters")
 

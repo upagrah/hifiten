@@ -1,0 +1,138 @@
+<!----------------------------------- SIDE BAR ---------------------------------------------------------->
+<div class="row flex-nowrap app-area">
+  <div class="col-md-2">
+  <nav class="col-md-2 d-none d-md-block bg-light sidebar ">
+    <div class="sidebar-sticky">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <!-- <hr style="background-color:#d35400;color:#d35400;border-color:#d35400;height:2px;"/> -->
+          <a class="nav-link active" href="#">
+            <span data-feather="home"></span><br/><br/><br/><br/>
+            &nbsp;
+            <h3 style="color:#3498db;text-align:center;"> < {{user}} ></h3><span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#" style="text-align:center;">
+            <span data-feather="home"></span>
+            &nbsp;connected to
+            <br/><br/>
+            <h3 style="color:#e74c3c;text-align:center;">  < No One ></h3><span class="sr-only">(current)</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <hr style="background-color:#c0392b;color:#c0392b;border-color:#c0392b;height:1px;"/>
+          <!-- <a class="nav-link" href="#">
+            <span data-feather="file"></span>
+            Orders
+          </a> --><br/>
+          <div class="row">
+            <div class="col-md-1">
+
+            </div>
+            <div class="col-md-10">
+
+              <div class="input-group mb-3 channel-input">
+
+                  <input id="channel" type="text" class="form-control" placeholder="type to connect" aria-describedby="basic-addon2">
+
+                  <div class="input-group-append">
+                      <button id="submit-add-channel" type="submit" class="btn btn-dark add-button" style="background-color:#e74c3c;"><i class="fa fa-plus" aria-hidden="true" style="color:white;" ></i></button>
+                  </div>
+              </div>
+              <label style="color:white;font-size">  Channel name <br/> </label>
+            </div>
+            <div class="col-md-1">
+
+            </div>
+          </div>
+
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#">
+            <span data-feather="shopping-cart"></span>
+            Products
+          </a>
+        </li> -->
+
+      </ul>
+
+
+    </div>
+  </nav>
+  </div>
+  <!-- --------------------------------SIDE BAR ENDS --------------------------------------------------- -->
+<!-- SHOUT BOX -->
+  <div class="col-md-9" style="border:0px solid red;padding-left:50px;">
+    <div id="message-view" class="col color-message-test" style="border:0px solid red;background-color:black;">
+
+        <div class="comment-container" style="border:0px solid red;background-color:black;">
+            <ul id="comment-list" class="list-unstyled " style="color:green;border:0px solid red;">
+              <div class="container" style="margin-left:0.5%;">
+
+
+              <div class="row">
+
+                <div class="col-md-9" style="border:0px solid red;">
+                  <div class="author-message">
+                    champrakri <span class="date"> > 20 JULY 2020 16:17 PM </span>
+
+                  </div>
+                  <div class="body-message">
+                    What is thisLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+
+                </div>
+
+              </div>
+              </div>
+            </ul>
+            <ul id="comment-list" class="list-unstyled " style="color:green;border:0px solid red;">
+              <div class="container" style="margin-left:0.5%;">
+
+
+              <div class="row">
+
+                <div class="col-md-9" style="border:0px solid red;">
+                  <div class="author-message">
+                    champrakri <span class="date"> > 20 JULY 2020 16:17 PM </span>
+
+                  </div>
+                  <div class="body-message">
+                    What is thisLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+
+                </div>
+
+              </div>
+              </div>
+            </ul>
+            <!-- <ul id="comment-list" class="list-unstyled" style="color:green;border:1px solid red;">
+              What is this
+            </ul>
+            <ul id="comment-list" class="list-unstyled" style="color:green;">
+              What is this
+            </ul> -->
+        </div>
+        <form id="message-form">
+            <div class="input-group mb-3 message-input">
+                <input id="message-input" type="text" class="form-control" placeholder="Enter message here" aria-describedby="basic-addon2">
+                <div class="input-group-append" style="margin-top:0px;">
+                    <button id="submit-send-message" type="submit" class="btn btn-light add-button"><div id="send">Send</div></button>
+                </div>
+            </div>
+        </form>
+    </div>
+  </div>
+  <div class="col-md-1">
+
+  </div>
+</div>
+<!-- SHOUT BOX ENDS -->

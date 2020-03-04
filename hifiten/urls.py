@@ -24,8 +24,14 @@ from django.conf.urls import url, include
 from django.views.generic import TemplateView
 from django.contrib.auth.decorators import login_required
 
+from django.conf import settings
+import sys
+sys.path.insert(0,settings.BASE_DIR)
+from userprofile.views.home import home_view
+
 urlpatterns += [
 
     url(r'^accounts/', include("useraccounts.urls")),
-    url(r'^$', login_required(TemplateView.as_view(template_name="home.html"))),
+    url(r'^$', home_view,name='home'),
+    
 ]
